@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Piramide {
 
-	/**
-	 * @param args
-	 */
+
 	public static void main(String[] args) {
 		
 		/*        Representação Visual da Piramide
