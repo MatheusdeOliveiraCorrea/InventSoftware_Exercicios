@@ -77,6 +77,18 @@ public class Piramide {
 
 		} // fim for
 
+		
+		for (float f : piramide) {
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
 		// Mostrar bonito na tela
 		int cont = 1;
 		// percorrer todos os elementos de uma piramide
@@ -96,6 +108,9 @@ public class Piramide {
 			 * System.out.print("\t" +piramide[13] + "  "); System.out.println("\t"
 			 * +piramide[14] + "  ");
 			 */
+			
+			
+			
 
 		}
 
