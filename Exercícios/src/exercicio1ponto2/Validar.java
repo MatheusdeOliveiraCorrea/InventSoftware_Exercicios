@@ -83,8 +83,9 @@ public class Validar {
 	
 	public boolean checkar (String expressao)  {
 		
-		boolean res = false;
-		
+		boolean res = true;
+		boolean sit1, sit2, sit3;
+		sit1 = sit2 = sit3 = true;
 
 		if(this.checkarQuantidade(expressao)) { 
 			
@@ -119,33 +120,50 @@ public class Validar {
 				
 				}
 				
-			System.out.println(queue);
-			System.out.println(stack);
 
 			
 			char[] abertura = new char[3];
 			char[] fechamento = new char[3];
 					
-			for(int i = 0; i <= queue.size(); i++ ) {
+			for(int i = 0; !queue.isEmpty(); i++ ) {
 				
 				abertura[i] = queue.remove();
 				
 			}
 			
-			for(int i = 0; i <= stack.size(); i++ ) {
+			for(int i = 0;!stack.isEmpty(); i++ ) {
 				
 				fechamento[i] = stack.pop();
 				
 			}
 			
 			
-			System.out.println(abertura);
-			System.out.println(fechamento);
-			
-			
-			
-			
-			
+			for(int j = abertura.length - 1; j > 0; j--) {
+				
+				if(abertura[j] == '(') {
+					if(fechamento[j] != ')') {
+						sit1 = false;
+					}
+				}
+				
+				
+				
+				if(abertura[j] == '[') {
+					if(fechamento[j] != ']') {
+						sit2 = false;
+					}
+				}
+				
+				if(abertura[j] == '{') {					
+					if(fechamento[j] != '}') {
+						sit3 = false;
+					}
+					
+					
+				}
+				
+					
+			}
 			
 			
 			
@@ -155,6 +173,8 @@ public class Validar {
 			System.out.println("Expressão com erro... ");	
 			
 		}
+		
+		res = sit1 && sit2 && sit3;
 		
 		return res; 
 		
