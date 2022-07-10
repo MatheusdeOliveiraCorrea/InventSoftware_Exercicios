@@ -1,5 +1,6 @@
 package exercicio1ponto2;
 
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -118,14 +119,32 @@ public class Validar {
 				
 				}
 				
-			
+			System.out.println(queue);
+			System.out.println(stack);
 
-			for (int i = 0; i <= queue.size(); i++) {
+			
+			char[] abertura = new char[3];
+			char[] fechamento = new char[3];
+					
+			for(int i = 0; i <= queue.size(); i++ ) {
 				
-								 
-				
+				abertura[i] = queue.remove();
 				
 			}
+			
+			for(int i = 0; i <= stack.size(); i++ ) {
+				
+				fechamento[i] = stack.pop();
+				
+			}
+			
+			
+			System.out.println(abertura);
+			System.out.println(fechamento);
+			
+			
+			
+			
 			
 			
 			

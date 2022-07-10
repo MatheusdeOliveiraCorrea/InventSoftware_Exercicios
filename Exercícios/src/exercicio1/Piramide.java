@@ -137,7 +137,7 @@ public class Piramide {
 		
 		
 		
-		System.out.println("---> SOMA DOS MENORES VALORES: " + soma);
+		System.out.println("--->SOMA DOS MENORES VALORES: " + soma);
 		
 
 
